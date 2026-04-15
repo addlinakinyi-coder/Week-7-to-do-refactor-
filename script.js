@@ -44,3 +44,18 @@ addBtn.addEventListener('click', addTask);
 
 // Run render immediately so saved tasks show up on page load
 render();
+// ... All your Selectors, State, and Functions are up here ...
+
+// 5. INITIALIZE (Putting everything to work)
+addBtn.addEventListener('click', addTask);
+
+// This part makes the Enter key work!
+taskInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        addTask();
+    }
+});
+
+// Run render once to show any saved tasks
+render();
+
